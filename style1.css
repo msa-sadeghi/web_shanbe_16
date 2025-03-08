@@ -1,0 +1,22 @@
+body{
+    background-color: cyan;
+}
+h1{
+    color: red;
+}
+h2{
+    color: green;
+}
+
+img{
+    width:100px
+}
+
+span#first{
+    color: red;
+    background-color: white;
+}
+span#second{
+    color:blue;
+    background-color:yellow ;
+}
