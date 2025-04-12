@@ -1,0 +1,51 @@
+img{
+    width: 100%;
+    height: auto;
+}
+
+div{
+    /* background-color: rgb(100, 120, 150); */
+    /* background-color: rgba(100, 120, 150,0.5); */
+    background-color: rgb(66 190 14 / 50%);;
+    background-color: #95c2d2;
+    border: 1px solid rgb(100%, 100%, 100%);
+}
+
+div > p{
+    color: red;
+}
+
+div p span.first{
+    color: green;
+}
+
+div p span.second{
+    color: purple;
+}
+
+p{
+    color: blue;
+}
+
+ul > a{
+    color: red;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* p ~ a{
+    color: red;
+} */
+p + a{
+    color: red;
+   
+}
+
+p#test{
+    color: green;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+
+}
