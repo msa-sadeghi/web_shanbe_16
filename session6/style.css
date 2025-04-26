@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#w{
+    color: red;
+    text-align: center;
+    padding: 20px;
+    margin: 30px;
+}
+.ws{
+    color: green;
+    font-size: 32px;
+}
+span{
+    background-color: cyan;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    background-color: yellow;
+    border: 2px solid green;
+}
+a:visited{
+    
+    color: #514e4e;
+}
+p:not(.ws){
+    background-color: rgb(115, 72, 72);
+    text-shadow: 2px 4px 5px #ccc;
+}
+ul.first>li:nth-child(2){
+    background-color: red;
+}
+
+ul.second>li:nth-child(2n){
+    background-color: lightblue;
+}
+ul.second>li:nth-child(2n + 1){
+    background-color: rgb(31, 176, 225);
+}
+ul{
+    border: 3px  dotted red;
+    border-radius: 20px;
+    box-shadow: 11px -5px 13px 4px #000;
+    
+}
+
+body{
+    background: url(../bmw.png);
+}
+
+ul li{
+    list-style-image: ;
+}
