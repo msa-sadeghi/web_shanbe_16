@@ -1,0 +1,48 @@
+input{
+    width: 240px;
+    height: 30px;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+label{
+    font-size: 20px;
+    margin-left: 20px;
+}
+form input, label{
+    display: block;
+}
+
+form{
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 20px;
+    width: 450px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    color: #4CAF50;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.mybtn{
+    width: 100px;
+    
+    height: 40px;
+    border-radius: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.mybtn:hover{
+    background-color: #45a049;
+}
+.mybtn:active{
+    background-color: #3e8e41;
+    transform: translateY(4px);
+    color: red;
+}
