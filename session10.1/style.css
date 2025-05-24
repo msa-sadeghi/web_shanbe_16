@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.sample{
+    width:30%;
+    height: 100px;
+    background-color: orangered;
+    float: left;
+}
+
+@media screen and (max-width:600px){
+    .sample{
+    width:100%;
+    height: 100px;
+    background-color: orangered;
+}
+.test{
+    display: none;
+}
+    
+}
+
+.test{
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    float: left;
+}
