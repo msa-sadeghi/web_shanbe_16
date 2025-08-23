@@ -1,0 +1,25 @@
+@font-face {
+    font-family: vazir;
+    src: url(../../Vazirmatn-Bold.woff2);
+}
+
+*, body{
+    direction: rtl;
+    font-family: vazir;
+}
+
+div.right, div.left, .d-flex{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    padding: 0 10px;
+    color: #4c4c4c;
+}
+
+div.left img{
+    width: 50px;
+}
