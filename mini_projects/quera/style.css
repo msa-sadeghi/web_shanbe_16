@@ -4,8 +4,12 @@
 }
 
 *, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     direction: rtl;
     font-family: vazir;
+    /* overflow-x: hidden; */
 }
 
 div.right, div.left, .d-flex{
@@ -39,14 +43,23 @@ input[type=checkbox]{
 i.fa-bars{
     display: none;
 }
-
+.sticky{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    
+}
 @media screen and (max-width:650px) {
     nav{
         display: none;
         position: absolute;
-        top: 10%;
+        top: 49px;
         width: 100%;
         box-shadow: 2px 2px 2px 2px #efefef;
+        z-index: 999;
+        background-color: white;
+        
     }
     nav a {
         display: block;
@@ -55,7 +68,19 @@ i.fa-bars{
     }
     nav a:hover{
         background-color: #e2dbdb;
+    /* }
+    nav a::after{
+        content: '';
+        display: block;
+       
+        height: 2px;
+        background-color: black;
+        opacity: 0;
+        transition: opacity 1s ease-out;
     }
+    nav a:hover::after{
+        opacity: 1;
+    } */
 
     .right{
         display: block;
