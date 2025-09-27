@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه آنلاین</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <div class="container-fluid p-0">
+        <header id="main-navbar">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a href="" class="navbar-brand fw-bold">فروشگاه من</a>
+                    <button class="navbar-toggler"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarContent"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="">خانه</a></li>
+                            <li class="nav-item"><a class="nav-link" href="">محصولات</a></li>
+                            <li class="nav-item">
+                                <a href=""
+                                data-bs-toggle="modal" data-bs-target="#cartmodal" 
+                                class="nav-link">سبد خرید</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="">تماس  با ما</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="hero">
+            <div id="heroCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../bmw.png" alt="" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>محصولات ویژه امروز</h5>
+                            <p>تخفیف های شگفت انگیز برای خرید اول شما</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="../bmw.png" alt="" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>محصولات ویژه امروز</h5>
+                            <p>تخفیف های شگفت انگیز برای خرید اول شما</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="../bmw.png" alt="" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>محصولات ویژه امروز</h5>
+                            <p>تخفیف های شگفت انگیز برای خرید اول شما</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev"
+                data-bs-target="#heroCarousel"
+                data-bs-slide="prev">
+                    <span class="bi bi-arrow-left-circle-fill text-danger fs-1"></span>
+                </button>
+                <button class="carousel-control-next"
+                data-bs-target="#heroCarousel"
+                data-bs-slide="next">
+                    <span class="bi bi-arrow-right-circle-fill text-danger fs-1"></span>
+                </button>
+            </div>
+        </section>
+
+
+
+        <section id="categories"></section>
+        <section id="products"></section>
+        <section id="promo"></section>
+        <section id="newsletter"></section>
+        <footer id="site-footer"></footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
