@@ -1,47 +1,64 @@
-// let x  =0;
-// x = x + 1
-// x += 1
-// x++
-// console.log("123" == 123)
-// console.log("123" === 123)
-// if(x >= 2){
-//    console.log("ff")
-// }
-// else if(x < 1){
-
-// }
-// else{
-
-// }
-// //   &&    ||     !
-// let isLoggedIn = false
-// document.body.innerHTML = isLoggedIn ? "<h1>Hello</h1>" : 
-
-//                                        "<h1>not allowed</h1>"
-
-// if(isLoggedIn){
-//    document.body.innerHTML = "<h1>Welcome</h1>"
-// }else{
-   
-//    document.body.innerHTML = "<h1>not allowed</h1>"
-// }
-
+//function createCounter(){
+//    let counter = 0
+//    return {
+//        increment: function(){
+//        counter++
+//        return counter
+//        },
+//        decrement:function(){
+//        counter--
+//        return counter
+//        },
+//        getCount: function(){
+//            return counter
+//        }
+//    }
+//}
+//
+//const counter1 = createCounter()
+//console.log(counter1.increment())
+//console.log(counter1.increment())
+//console.log(counter1.increment())
+//console.log(counter1.decrement())
+//console.log("----------------")
+//const counter2 = createCounter()
+//console.log(counter2.increment())
+//console.log(counter2.increment())
 
 
-let x = 12
+//let students = ["ali", "sara", "matin"]
+//students.shift()
+//console.log(`first array length: ${students.length}`)
+//students.forEach(item => console.log(item))
+//let arr1 = new Array("apple", "banana")
+//arr1.pop()
+//console.log(`second array length: ${arr1.length}`)
+//
+//arr1.forEach(item => console.log(item))
+//let  arr2 = new Array(5)
+//console.log(`third array length: ${arr2.length}`)
+//
+//arr2[0] = 12
+//arr2[1] = 17
+//arr2[2] = 16
+//arr2[3] = 17
+//arr2[4] = 18
+//arr2.push(1000)
+//arr2.unshift(999,888)
+//arr2.forEach(item => console.log(item))
 
-switch(x){
-   case 1:
-   case 5:
-      console.log("blalala")
-      break
-   case 2:
-      console.log("2")
-      break
-   case 12:
-   case 13:
-      console.log("12")
-      break
-   default:
-      console.log("another")
+let grades = [100, 90, 89, 78, 98]
+for(let i = 0; i < grades.length; i++){
+    console.log(grades[i])
 }
+
+for(let item of grades){
+console.log(item)
+}
+
+for(let i in grades){
+    console.log(i)
+    console.log(grades[i])
+}
+
+grades.forEach(x => console.log(x))
