@@ -35,10 +35,21 @@ function renderItems(){
         <span class="item-content">
         ${element.name}
         </span>
+        <button class="btn-danger" onclick=addToBasket(${element.id})>Add</button>
         </div>`
     });
 }
 
 function updateStats(){
+    
+}
 
+
+function addToBasket(p){
+//
+}
+function clearAll(){
+    products = []
+    renderItems()
+    document.getElementById("itemInput") = ''
 }
