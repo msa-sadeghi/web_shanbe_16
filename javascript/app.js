@@ -1,70 +1,41 @@
-let product = {
-    id:1,
-    name :'laptop',
-    price:100
-}
-
-let div = document.createElement("div")
-let product = JSON.parse(localStorage.getItem('p1'))
-let span1 = document.createElement("p")
-span1.innerHTML = product['id']
-let span2 = document.createElement("p")
-span2.innerHTML = product['name']
-let span3 = document.createElement("p")
-span3.innerHTML = product['price']
-let img = document.createElement("img")
-
-img.style.width="100%"
-div.append(span1, span2, span3)
-
-let img_input = document.getElementById("img")
-img_input.addEventListener("input",(e)=>{
-    let path = e.target.value.split("\\")
-    img.src = './images/'+path[path.length-1] 
-    div.append(img)
-})
-
-document.body.append(div)
-
-let user = {
-    name:"ali",
-    age:25,
-    email:"ali@gmail.com",
-    city:'tehtarn'
-}
-let user2 = {
-    name:"arash",
-    age:25,
-    email:"ali@gmail.com",
-    city:'tehtarn'
-}
-
-console.log(Object.keys(user).length)
-
-
-function Person(name, age){
-    this.name = name
-    this.age = age
-
-    this.greet = function(){
-        console.log(`hello from ${this.name}`)
+const loadingElement = document.querySelector('.loading')
+const containerElement = document.querySelector('.container')
+function showLoading(flag){
+    if(flag){
+        loadingElement.style.display = "block"
+    }else{
+        
+        loadingElement.style.display = "none"
     }
 }
 
-let p1 = new Person("sara", "34")
-let p2 = new Person("armin", "34")
-p1.greet()
-p2.greet()
+async function fetchUsers() {
 
-let div = document.querySelector("div")
-div.innerHTML = p1.name
+    showLoading(true)
+    try{
+        let response = await fetch("https://jsonplaceholder.typicode.com/users")
+        let data = await response.json()
+        displayUsers(data)
+    }
+    catch(error){
+        console.log(error)
+    }
+   
+}
 
+fetchUsers()
 
-let userInput = document.querySelector("input")
-
-userInput.addEventListener("blur", ()=>{
-    let p = document.createElement("p")
-    p.innerHTML = userInput.value
-    document.body.append(p)
-})
-
+function displayUsers(allUsers){
+    showLoading(false)
+    allUsers.forEach(element => {
+        let cardElement = document.createElement("div")
+        let nameElement = document.createElement("div")
+        nameElement.innerText=element.name
+        nameElement.classList.add("item")
+        let emailElement = document.createElement("div")
+        emailElement.innerText=element.email
+        cardElement.append(nameElement,emailElement)
+        cardElement.classList.add("card")
+        containerElement.append(cardElement)
+    });
+}
