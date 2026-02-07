@@ -13,9 +13,11 @@ async function fetchUsers() {
 
     showLoading(true)
     try{
-        let response = await fetch("https://jsonplaceholder.typicode.com/users")
-        let data = await response.json()
-        displayUsers(data)
+        let usersResponse = await fetch(`https://jsonplaceholder.typicode.com/users`)
+        let postsResponse = await fetch(`https://jsonplaceholder.typicode.com/posts`)
+        let usersData = await usersResponse.json()
+        let postsData = await postsResponse.json()
+        displayUsers(usersData, postsData)
     }
     catch(error){
         console.log(error)
@@ -25,7 +27,7 @@ async function fetchUsers() {
 
 fetchUsers()
 
-function displayUsers(allUsers){
+function displayUsers(allUsers, allPosts){
     showLoading(false)
     allUsers.forEach(element => {
         let cardElement = document.createElement("div")
@@ -34,7 +36,15 @@ function displayUsers(allUsers){
         nameElement.classList.add("item")
         let emailElement = document.createElement("div")
         emailElement.innerText=element.email
-        cardElement.append(nameElement,emailElement)
+        let a = document.createElement("a")
+        a.innerText = "show posts"
+        a.style = "cursor:pointer"
+        a.addEventListener('click', () =>  {
+                const filteredPosts =  allPosts.filter(p=>p.userId === element.id)
+                location.href = "posts.html"
+                console.log(filteredPosts)
+        })
+        cardElement.append(nameElement,emailElement, a)
         cardElement.classList.add("card")
         containerElement.append(cardElement)
     });
