@@ -41,7 +41,7 @@ function displayUsers(allUsers, allPosts){
         a.style = "cursor:pointer"
         a.addEventListener('click', () =>  {
                 const filteredPosts =  allPosts.filter(p=>p.userId === element.id)
-                location.href = "posts.html"
+                location.href = "posts.html?userId="+element.id
                 console.log(filteredPosts)
         })
         cardElement.append(nameElement,emailElement, a)
