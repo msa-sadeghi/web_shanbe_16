@@ -7,17 +7,32 @@ function ShoppingCard(){
         {id:3, name :"Pc", price:1500, details:"Pc pro "},
         
     ])
+    const [newName, setNewName] = useState('')
+    const handleAdd = ()=>{
+        const newItem = {
+            id:items.length + 1,
+            name:newName,
+            price:0,
+            details:""
+        }
+        setItems((prev)=>[...prev,  newItem])
+        setNewName("")
+    }
+    const handleRemove = (id)=>{
+        setItems((prev)=> prev.filter((item)=> item.id !== id))
+    }
 
     return(
             <div>
                 <input 
+                onChange={(e)=>setNewName(e.target.value)}
                 style={{padding:"10px 20px", border:"none",
                      borderRadius:"15px"}} 
                 type="text" />
-                <button>Add Product</button>
+                <button onClick={handleAdd}>Add Product</button>
                 <ul style={{listStyle:"none"}}>
                     {items.map(item=>(
-                       <Card item={item}/>
+                       <Card item={item} onRemove={handleRemove}/>
                     ))}
                 </ul>
             </div>
