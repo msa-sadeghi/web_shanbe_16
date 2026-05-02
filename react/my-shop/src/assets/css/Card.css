@@ -1,0 +1,14 @@
+li{
+    padding: 20px;
+    background-color: #efefef;
+    border: none;
+    border-radius: 15px;
+    color: black;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+span{
+    padding: 0 10px;
+}

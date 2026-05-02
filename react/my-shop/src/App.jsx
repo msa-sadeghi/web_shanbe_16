@@ -1,13 +1,10 @@
 import React from 'react'
 import './App.css'
-
+import ShoppingCard from './components/ShoppingCard' 
 function App() {
-  
-
   return (
-    <div className='App'>
-     <h1>Hello from react</h1>
-     <p>we want create shop with react</p>
+    <div>
+      <ShoppingCard/>
     </div>
   )
 }
