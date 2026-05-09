@@ -1,10 +1,10 @@
 import React from 'react'
-import './App.css'
-import ShoppingCard from './components/ShoppingCard' 
+import SignupForm from './components/SignupForm'
+import "./assets/css/form.css"
 function App() {
   return (
-    <div>
-      <ShoppingCard/>
+    <div className='container'>
+      <SignupForm/>
     </div>
   )
 }
