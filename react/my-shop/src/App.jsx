@@ -1,10 +1,9 @@
 import React from 'react'
-import SignupForm from './components/SignupForm'
-import "./assets/css/form.css"
+import ProductList from './components/ProductList'
 function App() {
   return (
     <div className='container'>
-      <SignupForm/>
+      <ProductList/>
     </div>
   )
 }
