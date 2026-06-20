@@ -6,7 +6,7 @@ import routes
 
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__)       
     app.config.from_object(Config)
     CORS(app)
     db.init_app(app)
