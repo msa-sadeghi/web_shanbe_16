@@ -1,9 +1,8 @@
-import Counter from "./components/Counter";
-
+import RegistrationForm from "./components/RegistrationForm";
 function App() {
   return (
     <div className="container">
-      <Counter />
+      <RegistrationForm />
     </div>
   );
 }
