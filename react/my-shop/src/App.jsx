@@ -1,8 +1,9 @@
-import RegistrationForm from "./components/RegistrationForm";
+import ShoppingCard from "./components/ShoppingCard";
 function App() {
+  
   return (
     <div className="container">
-      <RegistrationForm />
+      <ShoppingCard />
     </div>
   );
 }
