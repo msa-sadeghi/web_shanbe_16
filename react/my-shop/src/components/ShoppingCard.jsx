@@ -1,10 +1,13 @@
 import { useReducer } from "react";
 import cartReducer from "./cartReducer";
 export default function ShoppingCard() {
-  const [state, dispatch] = useReducer(cartReducer, { items: [] });
-  const addToCart = (product) => {
-    dispatch({ type: "ADD_ITEM", payload: product });
-  };
+  const [state, dispatch] = useReducer(cartReducer, {
+    items: [
+      { id: 1, name: "laptop", price: 1, quantity: 1 },
+      { id: 2, name: "pc", price: 2, quantity: 2 },
+      { id: 3, name: "iphone", price: 2, quantity: 3 },
+    ],
+  });
 
   const removeFromCart = (pid) => {
     dispatch({ type: "REMOVE_ITEM", payload: pid });
@@ -17,6 +20,11 @@ export default function ShoppingCard() {
   const clearCart = () => {
     dispatch({ type: "CLEAR_CART" });
   };
+
+  const totalPrice = state.items.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0,
+  );
   return (
     <div>
       <h2>Shopping Card</h2>
@@ -28,15 +36,15 @@ export default function ShoppingCard() {
             type="number"
             value={item.quantity}
             min="1"
-            // onChange={(e)=>}
+            onChange={(e) => updateQuantity(item.id, e.target.value)}
           />
           <span>{item.price * item.quantity} toman</span>
-          <button>remove</button>
+          <button onClick={() => removeFromCart(item.id)}>remove</button>
         </div>
       ))}
 
-      <p>total price: </p>
-      <button>clear cart</button>
+      <p>total price: {totalPrice}</p>
+      <button onClick={clearCart}>clear cart</button>
     </div>
   );
 }
