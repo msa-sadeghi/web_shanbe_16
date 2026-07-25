@@ -14,8 +14,8 @@ export default function ProductList() {
     <div>
       {products.map((p) => (
         <div key={p.id}>
-          <div>p.name</div>
-          <div>p.price</div>
+          <div>{p.name}</div>
+          <div>{p.price}</div>
           <button onClick={() => addToCart(p)}>Add To Cart</button>
         </div>
       ))}

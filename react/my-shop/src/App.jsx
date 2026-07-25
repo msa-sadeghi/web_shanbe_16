@@ -1,9 +1,9 @@
 import ShoppingCard from "./components/ShoppingCard";
-// import ProductList from "./components/productList";
+import ProductList from "./components/productList";
 function App() {
   return (
     <div className="container">
-      {/* <ProductList /> */}
+      <ProductList />
       <ShoppingCard />
     </div>
   );
