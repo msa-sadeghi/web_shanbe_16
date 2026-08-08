@@ -1,10 +1,8 @@
-import ShoppingCard from "./components/ShoppingCard";
-import ProductList from "./components/productList";
+import Counter from "./components/Counter";
 function App() {
   return (
-    <div className="container">
-      <ProductList />
-      <ShoppingCard />
+    <div>
+      <Counter />
     </div>
   );
 }
