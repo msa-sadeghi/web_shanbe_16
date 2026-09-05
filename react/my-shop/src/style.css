@@ -1,4 +1,14 @@
-.test{
-    border: 2px solid green;
-    border-radius: 15px;
+.test {
+  border: 2px solid green;
+  border-radius: 15px;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+}
+
+.active {
+  color: #ff6b6b;
+  font-weight: bold;
 }

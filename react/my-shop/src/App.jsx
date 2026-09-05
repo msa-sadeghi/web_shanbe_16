@@ -1,9 +1,11 @@
-import Counter from "./components/Counter";
+import { Route, Routes } from "react-router-dom";
+import ProductDetail from "./components/ProductDetail";
+import "./style.css";
 function App() {
   return (
-    <div>
-      <Counter />
-    </div>
+    <Routes>
+      <Route path="/posts/:id" element={<ProductDetail />} />
+    </Routes>
   );
 }
 
